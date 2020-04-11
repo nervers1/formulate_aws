@@ -1,0 +1,14 @@
+body {width: 70em; margin: 0 auto;}
+.font-roboto {font-family: 'Roboto', monospace;}
+.font-pen {font-family: 'Nanum Pen Script', cursive;}
+.font-brush {font-family: 'Nanum Brush Script', cursive;}
+.font-coding {font-family: 'Nanum Gothic Coding', monospace;}
+.container {margin: 0; padding: 0;}
+.container h2 {text-align: center;}
+.sentence-s {font-family: 'Nanum Pen Script', cursive; font-size: 35px; padding: 20px; text-align: center;}
+.c-text { margin: 40px 0 40px; padding: 10px 30px 40px; background-color: #ebebeb; border-radius: 5px;}
+.c-text p:nth-child(odd) { margin-bottom: 5px; margin-left: 5px; font-family: 'Roboto', monospace;}
+.c-text p:nth-child(even) { color: #ff8c00; margin-top: 5px;}
+.a-text { padding: 10px 20px 40px; font-family: 'Nanum Pen Script', cursive; font-size: 22px; letter-spacing: 3px;}
+#times {display: flex; flex-flow: row wrap; justify-content: flex-end;}
+#times span { padding-right: 12px; font-size: 22px;}

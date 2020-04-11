@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Time</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic+Coding&family=Nanum+Pen+Script&family=Roboto:wght@300;400;500;700&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+    <div class="sentence-s">
+        Almost before we knew it, we had left the ground.
+    </div>
+    <div class="c-text">
+        <p> 道可道非常道 名可名非常名</p>
+        <p>(도가도비상도 명가명비상명)</p>
+
+        <p> 無名天地之始 有名萬物之母</p>
+        <p>(무명천지지시 유명만물지모)</p>
+
+        <p> 故常無欲 以觀其妙 常有欲 以觀其徼</p>
+        <p>(고상무욕 이관기묘 상유욕 이관기요)</p>
+
+        <p> 此兩者 同出而異名 同謂之玄 玄之又玄 衆妙之門</p>
+        <p>(차양자 동출이이명 동위지현 현지우현 중묘지문)</p>
+    </div>
+
+    <div class="a-text">
+        <p>도라 일컫는 것은 늘 도가 아니고, 이름이라 붙은 것은 늘 이름이 아니다.</p>
+
+        <p>이름 없는 것은 하늘과 땅의 처음이며 이름 있는 것은 만물의 어머니이다.</p>
+
+        <p>늘 바라는 것이 없어야 그 묘한 것이 보이고 늘 바라는 것이 있으면 껍데기만 보인다.</p>
+
+        <p>이 둘은 같은 것으로부터 나와 다른 이름이 붙었는데 같은 것을 신비롭다고 하니 신비롭고 또 신비로워 온갖 묘한 것들이 드나드는 문이다.</p>
+    </div>
+
+    <div id="times">
+        <span class="font-pen">조회시각: </span>
+        <span class="font-pen" th:text="${#temporals.format(current, 'yyyy-MM-dd HH:mm:ss')}">
+            now~!
+        </span>
+    </div>
+
+    <h2 class="font-brush">Formulate Lab</h2>
+</div>
+<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+<!--<script src="/js/test.js"></script>-->
+</body>
+</html>
