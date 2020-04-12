@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 @Slf4j
 @Controller
 public class CustomErrorController implements ErrorController {
-    private String VIEW_PATH = "/errorPages/";
 
     @RequestMapping(value = "/error")
     public String handleError(HttpServletRequest request) {
@@ -23,21 +22,21 @@ public class CustomErrorController implements ErrorController {
         if (status != null) {
             int statusCode = Integer.valueOf(status.toString());
             if (statusCode == HttpStatus.NOT_FOUND.value()) {
-                return VIEW_PATH + "404";
+                return "forward:/customError404";
             }
             if (statusCode == HttpStatus.FORBIDDEN.value()) {
-                return VIEW_PATH + "500";
+                return "forward:/customError500";
             }
         }
         return "error";
     }
 
-    @GetMapping(path = "/404")
+    @GetMapping(path = "/customError404")
     public String notFound(Model model) {
         return "/errorPages/404";
     }
 
-    @GetMapping(path = "/500")
+    @GetMapping(path = "/customError500")
     public String internalServerError(Model model) {
         return "/errorPages/500";
     }
