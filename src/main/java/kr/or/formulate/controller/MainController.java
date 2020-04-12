@@ -26,17 +26,6 @@ public class MainController {
         return "time";
     }
 
-    @GetMapping(path = "/404")
-    public String notFound(Model model) {
-        model.addAttribute("message", "404 Not Found");
-        return "/errorPages/404";
-    }
-
-    @GetMapping(path = "/500")
-    public String internalServerError(Model model) {
-        model.addAttribute("message", "Internal Server Error");
-        return "/errorPages/500";
-    }
 
 
 }
