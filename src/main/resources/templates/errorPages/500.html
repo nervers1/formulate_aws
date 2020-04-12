@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/error.css">
+    <title>Internal Server Error</title>
+</head>
+<body>
+<div class="error-wrapper error-500">
+    <p class="error-message500" th:text="${message}">Internal Server Error</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+* { padding: 0; margin: 0; }
+html, body, .error-wrapper {min-height: 100% !important; height: 100%;}
+.error-wrapper { width: 100%;}
+.error-404 { background: url("/images/404.jpg") no-repeat center center fixed; background-size: cover;}
+.error-500 { background: url("/images/500.jpg") no-repeat center center fixed; background-size: cover;}
+.error-404 p, .error-500 p { margin: 0; padding: 0; }
+.error-message404 {color: #fff; position: absolute; top: calc(50%); left: calc(15%); font-weight: 700; font-family: 'Nanum Gothic Coding', monospace; font-size: 4em;}
+.error-message500 {color: #fff; position: absolute; top: calc(50%); left: calc(48%); font-weight: 700; font-family: 'Nanum Gothic Coding', monospace; font-size: 2em;}
