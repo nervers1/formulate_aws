@@ -1,0 +1,14 @@
+
+.font-roboto {font-family: 'Roboto', monospace;}
+.font-pen {font-family: 'Nanum Pen Script', cursive;}
+.font-brush {font-family: 'Nanum Brush Script', cursive;}
+.font-coding {font-family: 'Nanum Gothic Coding', monospace;}
+html, body { height: 100%; }
+body { margin: 0; display: flex; flex-flow: column nowrap; justify-content: space-between;}
+header {background-color: yellow; flex: 0 0 120px;}
+section.wrapper { display: flex; flex: 1 1 calc(100% - 240px); flex-direction: row; align-items: flex-start; justify-content: space-between; background: rgba(255, 0, 0, .5); text-align: center; }
+section.contents-left { width: 10%; height: 70px; background: rgba(166, 0, 0, .5);  }
+section.main { width: 80%; background: rgba(0, 0, 255, .5);}
+section.contents-right { width: 10%; background: rgba(0, 255, 0, .5)}
+footer {background-color: orange; flex: 0 0 120px;}
+
