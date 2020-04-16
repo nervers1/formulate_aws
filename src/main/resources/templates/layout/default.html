@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-    <head th:replace="fragments/head :: headFragment"></head>
+    <head th:replace="fragments/head :: headFragment"><title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">My website</title></head>
     <header th:replace="fragments/header :: headerFragment"></header>
     <section layout:fragment="content"></section>
     <footer th:replace="fragments/footer :: footerFragment"></footer>
