@@ -3,10 +3,16 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
 }
-
+ext {
+	javaVersion='11'
+	lombokVersion='1.18.12'
+}
 group = 'kr.or'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+//sourceCompatibility = '11'
+
+sourceCompatibility = javaVersion
+targetCompatibility = javaVersion
 
 configurations {
 	developmentOnly
@@ -26,12 +32,14 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.2'
-	compileOnly 'org.projectlombok:lombok'
+	compileOnly("org.projectlombok:lombok:${lombokVersion}")
+	testCompileOnly("org.projectlombok:lombok:${lombokVersion}")
+	annotationProcessor("org.projectlombok:lombok:${lombokVersion}")
+	testAnnotationProcessor("org.projectlombok:lombok:${lombokVersion}")
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-//	runtimeOnly 'mysql:mysql-connector-java'
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 	implementation 'org.webjars:jquery:3.4.1'
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client:2.6.0'
-	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}

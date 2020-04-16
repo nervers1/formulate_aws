@@ -27,9 +27,15 @@ public class MainController {
     }
 
 
+    @GetMapping(path = "/layout")
+    public String layout(Model model) {
+        return "layout";
+    }
+
+
     @GetMapping(path = "/main")
     public String main(Model model) {
-        return "layout";
+        return "main/main";
     }
 
 }
