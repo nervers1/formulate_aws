@@ -1,4 +1,11 @@
-
+@charset "UTF-8";
+form, img, ul, ol, table, td, article, figure, figcaption {margin: 0;padding: 0;border: 0;}
+a {outline: none;border: 0;}
+ul, ol {list-style: none outside none;}
+table {border-spacing: 0;}
+td {vertical-align: top;}
+html {-webkit-text-size-adjust: none;}
+html, body {margin: 0;height: 100%;}
 .font-roboto {font-family: 'Roboto', monospace;}
 .font-pen {font-family: 'Nanum Pen Script', cursive;}
 .font-brush {font-family: 'Nanum Brush Script', cursive;}
@@ -8,7 +15,7 @@ body {margin: 0; display: flex; flex-flow: column nowrap; justify-content: space
 header {flex: 0 0 120px; background-color: lightblue;}
 section.wrapper {display: flex;flex: 1 1 calc(100% - 240px);flex-direction: row;align-items: flex-start;justify-content: space-between;text-align: center;}
 section.contents-left {width: 10%;height: 70px;}
-section.main {width: 80%;}
+section.main {width: 80%; background-color: antiquewhite;}
 section.contents-right {width: 10%;}
 footer {flex: 0 0 120px;background-color: lightgreen;}
 
