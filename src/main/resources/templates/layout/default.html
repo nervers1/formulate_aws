@@ -4,5 +4,6 @@
     <header th:replace="fragments/header :: headerFragment"></header>
     <section layout:fragment="content"></section>
     <footer th:replace="fragments/footer :: footerFragment"></footer>
-    <div th:replace="fragments/includes :: externalFragment"></div>
+    <th:block layout:fragment="externalBlocks"></th:block>
+    <th:block layout:fragment="custom_script"></th:block>
 </html>
