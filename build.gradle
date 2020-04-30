@@ -38,7 +38,7 @@ dependencies {
 	testAnnotationProcessor("org.projectlombok:lombok:${lombokVersion}")
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
-	implementation 'org.webjars:jquery:3.4.1'
+	implementation 'org.webjars:jquery:3.5.0'
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client:2.6.0'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
