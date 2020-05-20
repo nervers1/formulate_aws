@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Slf4j
 @Controller
@@ -21,7 +22,8 @@ public class MainController {
     @GetMapping(path = "/")
     public String now(Model model) {
         LocalDateTime now = service.getCurrent();
-        log.info("now : {}", now);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy년 MM월 dd일, hh시 mm분 ss초");
+        log.info("now : {}", now.format(formatter));
         model.addAttribute("current", now);
         return "time";
     }
