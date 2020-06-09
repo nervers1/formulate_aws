@@ -8,6 +8,8 @@ class FormulateApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
+
 
 }
