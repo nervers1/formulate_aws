@@ -8,8 +8,9 @@ class FormulateApplicationTests {
 
 	@Test
 	void contextLoads() {
-
+		System.out.println("테스트입니다.");
 	}
+
 
 
 }
