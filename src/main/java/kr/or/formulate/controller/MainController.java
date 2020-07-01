@@ -40,4 +40,10 @@ public class MainController {
         return "main/main";
     }
 
+
+    @GetMapping(path = "/symbolicLink")
+    public String symbolicLink(Model model) {
+        return "main/symbolicLink";
+    }
+
 }

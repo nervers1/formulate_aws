@@ -15,7 +15,14 @@ body {margin: 0; display: flex; flex-flow: column nowrap; justify-content: space
 header {flex: 0 0 120px; background-color: lightblue;}
 section.wrapper {display: flex;flex: 1 1 calc(100% - 240px);flex-direction: row;align-items: flex-start;justify-content: space-between;text-align: center;}
 section.contents-left {width: 10%;height: 70px;}
-section.main {width: 80%; background-color: antiquewhite;}
+section.main {width: 80%; background-color: antiquewhite; text-align: left}
 section.contents-right {width: 10%;}
 footer {flex: 0 0 120px;background-color: lightgreen;}
+.basic-padding {padding: 20px}
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
 
