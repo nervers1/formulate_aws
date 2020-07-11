@@ -20,9 +20,7 @@ section.contents-right {width: 10%;}
 footer {flex: 0 0 120px;background-color: lightgreen;}
 .basic-padding {padding: 20px}
 pre {
-    white-space: pre-wrap;       /* Since CSS 2.1 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
+    white-space: pre-line;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
