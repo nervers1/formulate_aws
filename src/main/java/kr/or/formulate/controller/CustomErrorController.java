@@ -15,14 +15,14 @@ import javax.servlet.http.HttpServletRequest;
 @Slf4j
 @Controller
 public class CustomErrorController implements ErrorController {
-    private String VIEW_PATH = "errorPages/";
 
     @RequestMapping(value = "/error", produces=MediaType.TEXT_PLAIN_VALUE)
     public String handleError(HttpServletRequest request) {
         Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
         log.info("CustomErrorController -> status : {}", status);
         if (status != null) {
-            int statusCode = Integer.valueOf(status.toString());
+            int statusCode = Integer.parseInt(status.toString());
+            String VIEW_PATH = "errorPages/";
             if (statusCode == HttpStatus.NOT_FOUND.value()) {
                 return VIEW_PATH + "404";
             }
