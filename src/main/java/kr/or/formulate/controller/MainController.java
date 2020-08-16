@@ -30,19 +30,19 @@ public class MainController {
 
 
     @GetMapping(path = "/layout")
-    public String layout(Model model) {
+    public String layout() {
         return "layout";
     }
 
 
     @GetMapping(path = "/main")
-    public String main(Model model) {
+    public String main() {
         return "main/main";
     }
 
 
     @GetMapping(path = "/symbolicLink")
-    public String symbolicLink(Model model) {
+    public String symbolicLink() {
         return "main/symbolicLink";
     }
 
