@@ -1,23 +1,14 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.7.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'org.springframework.boot' version '2.6.2'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
-ext {
-	javaVersion ='11'
-		lombokVersion ='1.18.22'
-}
+
 group = 'kr.or'
 version = '0.0.1-SNAPSHOT'
-
-sourceCompatibility = javaVersion
-targetCompatibility = javaVersion
+sourceCompatibility = '11'
 
 configurations {
-	developmentOnly
-	runtimeClasspath {
-		extendsFrom developmentOnly
-	}
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
@@ -26,6 +17,25 @@ configurations {
 repositories {
 	mavenCentral()
 }
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.webjars:jquery:3.6.0'
+	implementation 'org.apache.commons:commons-lang3:3.12.0'
+}
+
+test {
+	useJUnitPlatform()
+}
+
+/*
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
@@ -47,7 +57,4 @@ dependencies {
 	implementation 'org.apache.commons:commons-lang3:3.12.0'
 
 }
-
-test {
-	useJUnitPlatform()
-}
+*/

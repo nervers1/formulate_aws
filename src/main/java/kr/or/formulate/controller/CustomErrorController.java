@@ -43,9 +43,10 @@ public class CustomErrorController implements ErrorController {
         return "errorPages/500";
     }
 
-    @Override
-    public String getErrorPath() {
-        return "/error";
-    }
+//    @Override
+//    public String getErrorPath() {
+//        return "/error";
+//    }
+
 }
 
