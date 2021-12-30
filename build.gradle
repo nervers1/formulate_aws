@@ -5,7 +5,7 @@ plugins {
 }
 ext {
 	javaVersion ='11'
-	lombokVersion ='1.18.12'
+		lombokVersion ='1.18.22'
 }
 group = 'kr.or'
 version = '0.0.1-SNAPSHOT'
@@ -30,7 +30,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.2'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
 	compileOnly("org.projectlombok:lombok:${lombokVersion}")
 	testCompileOnly("org.projectlombok:lombok:${lombokVersion}")
 	annotationProcessor("org.projectlombok:lombok:${lombokVersion}")
@@ -39,12 +39,12 @@ dependencies {
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 	implementation 'org.thymeleaf:thymeleaf'
 	implementation 'org.thymeleaf:thymeleaf-spring5'
-	implementation 'org.webjars:jquery:3.5.0'
-	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client:2.6.0'
+	implementation 'org.webjars:jquery:3.6.0'
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client:2.7.3'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
-	implementation 'org.apache.commons:commons-lang3:3.10'
+	implementation 'org.apache.commons:commons-lang3:3.12.0'
 
 }
 
